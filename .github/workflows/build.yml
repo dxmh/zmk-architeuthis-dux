@@ -33,28 +33,54 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build (Architeuthis Dux Left)
+
+      - name: West Build (Architeuthis Dux, Left, nice!nano v1)
         run: west build -s zmk/app -b nice_nano -- -DSHIELD=architeuthis_dux_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: Architeuthis Dux DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nice_nano.dts.pre.tmp
-      - name: Architeuthis Dux Left Kconfig file
+      - name: Architeuthis Dux, Left, nice!nano v1 Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 architeuthis_dux_left_nice_nano.uf2
-      - name: Archive (Architeuthis Dux Left)
+        run: cp build/zephyr/zmk.uf2 architeuthis-dux-left_nice-nano-v1.uf2
+      - name: Archive (Architeuthis Dux, Left, nice!nano v1)
         uses: actions/upload-artifact@v2
         with:
-          name: architeuthis_dux_firmware
-          path: architeuthis_dux_left_nice_nano.uf2
-      - name: West Build (Architeuthis Dux Right)
+          name: architeuthis-dux_nice-nano-v1
+          path: architeuthis-dux-left_nice-nano-v1.uf2
+
+      - name: West Build (Architeuthis Dux, Right, nice!nano v1)
         run: west build --pristine -s zmk/app -b nice_nano -- -DSHIELD=architeuthis_dux_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: Architeuthis Dux Right Kconfig file
+      - name: Architeuthis Dux, Right, nice!nano v1 Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 architeuthis_dux_right_nice_nano.uf2
-      - name: Archive (Architeuthis Dux Right)
+        run: cp build/zephyr/zmk.uf2 architeuthis-dux-right_nice-nano-v1.uf2
+      - name: Archive (Architeuthis Dux, Right, nice!nano v1)
         uses: actions/upload-artifact@v2
         with:
-          name: architeuthis_dux_firmware
-          path: architeuthis_dux_right_nice_nano.uf2
+          name: architeuthis-dux_nice-nano-v1
+          path: architeuthis-dux-right_nice-nano-v1.uf2
+
+      - name: West Build (Architeuthis Dux, Left, nice!nano v2)
+        run: west build --pristine -s zmk/app -b nice_nano_v2 -- -DSHIELD=architeuthis_dux_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      - name: Architeuthis Dux, Left, nice!nano v2 Kconfig file
+        run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
+      - name: Rename zmk.uf2
+        run: cp build/zephyr/zmk.uf2 architeuthis-dux-left_nice-nano-v2.uf2
+      - name: Archive (Architeuthis Dux, Left, nice!nano v2)
+        uses: actions/upload-artifact@v2
+        with:
+          name: architeuthis-dux_nice-nano-v2
+          path: architeuthis-dux-left_nice-nano-v2.uf2
+
+      - name: West Build (Architeuthis Dux, Right, nice!nano v2)
+        run: west build --pristine -s zmk/app -b nice_nano_v2 -- -DSHIELD=architeuthis_dux_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      - name: Architeuthis Dux, Right, nice!nano v2 Kconfig file
+        run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
+      - name: Rename zmk.uf2
+        run: cp build/zephyr/zmk.uf2 architeuthis-dux-right_nice-nano-v2.uf2
+      - name: Archive (Architeuthis Dux, Right, nice!nano v2)
+        uses: actions/upload-artifact@v2
+        with:
+          name: architeuthis-dux_nice-nano-v2
+          path: architeuthis-dux-right_nice-nano-v2.uf2
