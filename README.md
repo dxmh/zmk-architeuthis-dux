@@ -10,7 +10,7 @@ The [`architeuthis_dux` shield in this repository](/config/boards/shields/archit
 
 ## How do I use this firmware?
 
-Ready-to-flash firmware files for nice!nano can be downloaded from the latest build on the GitHub "[Actions][8]" tab.
+Ready-to-flash firmware files for many MCU boards can be downloaded from the latest build on the GitHub "[Actions][8]" tab.
 
 A very simple QWERTY keymap is provided which is useful for ensuring a new keyboard is functional. To make your own customisations to the keymap, simply [fork this repo][7] and modify [`config/architeuthis_dux.keymap`](config/architeuthis_dux.keymap); GitHub will then build your ready-to-flash firmware in the GitHub "Actions" tab of your own repo.
 
