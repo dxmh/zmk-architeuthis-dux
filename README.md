@@ -1,5 +1,7 @@
 # ZMK config for Architeuthis Dux
 
+Architeuthis Dux is now officially supported in ZMK as this shield has been merged upstream! ([`a_dux`][10], [PR #951][9]) 🎉
+
 ## What is this?
 
 [ZMK keyboard firmware][1] configuration for [Architeuthis Dux by Tapi][2].
@@ -28,3 +30,5 @@ Check out the rest of Tapi's Cephalopoda collection of low profile split ergonom
 [6]: https://zmk.dev/docs/troubleshooting#dtlibdterror
 [7]: https://github.com/dxmh/zmk-architeuthis-dux/fork
 [8]: https://github.com/dxmh/zmk-architeuthis-dux/actions
+[9]: https://github.com/zmkfirmware/zmk/pull/951
+[10]: https://github.com/zmkfirmware/zmk/tree/main/app/boards/shields/a_dux
