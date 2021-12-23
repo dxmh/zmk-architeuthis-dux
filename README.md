@@ -1,6 +1,9 @@
+
 # ZMK config for Architeuthis Dux
 
-Architeuthis Dux is now officially supported in ZMK as this shield has been merged upstream! ([`a_dux`][10], [PR #951][9]) 🎉
+**Notice**: Architeuthis Dux is now supported by default in ZMK as **this shield has been [merged][9] into ZMK** `main`! 🎉 
+
+You should no longer use this repository. Instead, select `A. Dux` from the ZMK installer or use the upstream [`a_dux`][10] shield. 🙂
 
 ## What is this?
 
